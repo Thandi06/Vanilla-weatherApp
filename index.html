@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="src/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>Vanilla Weather App</title>
 </head>
+
 <body>
-    <header>
-        <form>
-            <input type="search" placeholder="Enter a city.." required />
-            <input type="submit" value="search" />
-        </form>
-    </header>
-    <main>
-        <div>
-        <h1>Durban</h1>
-        <p>
-            Tuesday 14:49, scattered clouds
-            <br />
-            Humidity: 66%, Wind: 3.13km/h
-        </p>
-        </div>
-        <div>⛅ 12°C</div>
-    </main>
-    <footer>
-        This project was coded by 
-        <a href="https://github.com/Thandi06" target="_blank"  > Thandi Sithole</a>, is
-        <a href="https://github.com/Thandi06/Vanilla-weatherApp.git" target="_blank">open-sourced on GitHub</a> and hosted
-        <a href="https://thandi-weather-app.netlify.app/" target="_blank">on Netlify.</a>
-    </footer>
+    <div class="weather-app">
+        <header>
+            <form class="search-form" id="search-form">
+                <input type="search" placeholder="Enter a city.." required id="search-form-input"
+                    class="search-form-input" />
+                <input type="submit" value="Search" class="search-form-button" />
+            </form>
+        </header>
+        <main>
+            <div class="weather-app-data">
+                <div>
+                    <h1 class="weather-app-city" id="city"></h1>
+                    <p class="weather-app-details">Tuesday 
+                        <span id="time">14:49</span>,
+                        <span id="description">scattered clouds</span>
+                        <br />
+                        Humidity: <strong id="humidity">66%</strong>, Wind:
+                        <strong id="wind-speed">3.13km/h</strong>
+                    </p>
+                </div>
+                <div class="weather-app-temperature-container">
+                    <div class="weather-app-icon">⛅</div>
+                    <div class="weather-app-temperature" id="temperature"></div>
+                    <div class="weather-app-unit">°C</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            This project was coded by
+            <a href="https://github.com/Thandi06" target="_blank"> Thandi Sithole</a>,
+            is
+            <a href="https://github.com/Thandi06/Vanilla-weatherApp.gi" target="_blank">open-sourced on GitHub</a>
+            and hosted on
+            <a href="https://thandi-weather-app.netlify.app/" target="_blank">Netlify</a>
+        </footer>
+    </div>
+    <script src="src/index.js"></script>
 </body>
+
 </html>
