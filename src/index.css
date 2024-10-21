@@ -124,28 +124,30 @@ footer{
     justify-content: center;
     transition: transform 1s ease;
 }
-
-/* Animation for small screens (max-width: 768px) */
+/* Responsive Styles for smaller screens */
 @media (max-width: 768px) {
-    .weather-app-temperature-container {
-        animation: slide-horizontal 4s infinite alternate ease-in-out;
-    }
-}
-
-/* Animation Keyframes */
-@keyframes slide-horizontal {
-    0% {
-        transform: translateX(0);
-        /* Start at the center */
+    .weather-forecast {
+        overflow-x: auto;
+        /* Enable horizontal scrolling */
+        scroll-behavior: smooth;
+        /* Smooth scroll effect */
     }
 
-    50% {
-        transform: translateX(50px);
-        /* Slide to the right */
+    .weather-forecast:hover {
+        cursor: grab;
+        /* Pointer changes to grab on hover */
     }
 
-    100% {
-        transform: translateX(-50px);
-        /* Slide to the left */
+    /* Move slightly to the right on hover */
+    .weather-forecast:active {
+        cursor: grabbing;
+        /* Change cursor to grabbing */
+        transform: translateX(20px);
+        /* Move 20px right */
+    }
+
+    .weather-forecast:active:hover {
+        transform: translateX(-20px);
+        /* Move 20px left */
     }
 }
