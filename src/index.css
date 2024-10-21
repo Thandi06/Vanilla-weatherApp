@@ -126,6 +126,13 @@ footer{
 }
 /* Responsive Styles for smaller screens */
 @media (max-width: 768px) {
+    .weather-app {
+            width: 100%;
+            /* Take up more space on small screens */
+            margin: 20px auto;
+            padding: 15px;
+        }
+
     .weather-forecast {
         overflow-x: auto;
         /* Enable horizontal scrolling */
