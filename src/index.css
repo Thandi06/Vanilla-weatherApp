@@ -127,7 +127,7 @@ footer{
 /* Responsive Styles for smaller screens */
 @media (max-width: 768px) {
     .weather-app {
-            width: 100%;
+            width: 95%;
             /* Take up more space on small screens */
             margin: 20px auto;
             padding: 15px;
